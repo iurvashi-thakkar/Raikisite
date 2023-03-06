@@ -9,43 +9,51 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setdropdownOpen] = useState(false);
+    const [active, setActive] = useState("home");
     return (
         <nav className='flex justify-between items-center h-[68px] bg-navcolor text-black z-100'>
             <div className='hidden md:flex items-center px-[42px] gap-9'>
                 <img src={logo} alt="logo" />
                 <ul className='flex items-center gap-4 text-sm'>
-                    <Link to={"/"}>
-                        <li className='hover:text-navitem transition-all duration-100 cursor-pointer text-navitem'>Home</li>
+                    <Link to={"/"} onClick={() => setActive("home")}>
+                        <li className={active === "home" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Home</li>
                     </Link>
-                    <Link to={"/about"}>
-                        <li className='hover:text-navitem transition-all duration-100 cursor-pointer'>About</li>
+                    <Link to={"/about"} onClick={() => setActive("about")}>
+                        <li className={active === "about" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>About</li>
 
                     </Link>
-                    <Link to={"/services"}>
-                        <li className='hover:text-navitem transition-all duration-100 cursor-pointer'>Our Services</li>
+                    <Link to={"/services"} onClick={() => setActive("services")}>
+                        <li className={active === "services" ? ' transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Our Services</li>
                     </Link>
-                    <li className='hover:text-navitem transition-all duration-100 cursor-pointer relative'>
+                    <li className={active === "publication" ? 'transition-all duration-100 cursor-pointer relative text-navitem' : 'hover:text-navitem  transition-all duration-100 cursor-pointer relative'}>
                         <div className='flex gap-2 items-center' onClick={() => setdropdownOpen(!dropdownOpen)}>
                             Publication
                             <BsChevronCompactDown />
                         </div>
 
                         <div className={dropdownOpen ? 'flex flex-col gap-3 text-[#263238] transition-all duration-100 z-100  bg-[#F8F7FB] left-0 absolute -bottom-20 pr-10 pl-3  py-3 shadow-lg rounded-lg' :
-                            'hidden flex-col gap-3  text-[#263238] transition-all duration-100'}>
-                            <Link to={"/blogs"}>
+                            'hidden flex-col gap-3  text-[#263238] transition-all duration-100'} >
+                            <Link to={"/blogs"} onClick={() => {
+                                setActive("publication")
+                                setdropdownOpen(false)
+                            }}>
                                 <div className='hover:text-navitem transition-all duration-100 cursor-pointer'>Blogs</div>
                             </Link>
-                            <Link to={"/books"}>
-                                <div className='hover:text-navitem transition-all duration-100 cursor-pointer'>Books</div>
+                            <Link to={"/books"} onClick={() => {
+                                setActive("publication")
+                                setdropdownOpen(false)
+                            }}>
+                                <div className='hover:text-navitem transition-all duration-100 cursor-pointer '>Books</div>
                             </Link>
                         </div>
                     </li>
-                    <Link to={"/gallery"}>
-                        <li className='hover:text-navitem transition-all duration-100 cursor-pointer'>Gallery</li>
+                    <Link to={"/gallery"} onClick={() => setActive("gallery")}>
+                        <li className={active === "gallery" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem  transition-all duration-100 cursor-pointer'}>Gallery</li>
                     </Link>
-                    <Link to={"/contactus"}>
-                        <li className='hover:text-navitem transition-all duration-100 cursor-pointer'>Contact us</li>
+                    <Link to={"/contactus"} onClick={() => setActive("contactus")}>
+                        <li className={active === "contactus" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem  transition-all duration-100 cursor-pointer'}>Contact us</li>
                     </Link>
+
                 </ul>
             </div>
 
@@ -58,10 +66,19 @@ const Navbar = () => {
                     }
                 </div>
                 <ul className={menuOpen ? 'flex flex-col gap-4 text-sm absolute top-10 bg-[#F5F5F5] w-full left-0 p-[21px] shadow-lg' : 'hidden flex-col gap-4 text-sm absolute -bottom-80 bg-[#F5F5F5] w-full left-0 p-[21px] '}>
-                    <Link to={"/"}><li className='hover:text-navitem transition-all duration-100 cursor-pointer'>Home</li></Link>
-                    <Link to={"/about"}><li className='hover:text-navitem transition-all duration-100 cursor-pointer'>About</li></Link>
-                    <Link to={"/services"}><li className='hover:text-navitem transition-all duration-100 cursor-pointer'>Our Services</li></Link>
-                    <li className='hover:text-navitem transition-all duration-100 cursor-pointer '>
+                    <Link to={"/"} onClick={() => {
+                        setActive("home")
+                        setMenuOpen(false)
+                    }}><li className={active === "home" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Home</li></Link>
+                    <Link to={"/about"} onClick={() => {
+                        setActive("about")
+                        setMenuOpen(false)
+                    }}><li className={active === "about" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>About</li></Link>
+                    <Link to={"/services"} onClick={() => {
+                        setActive("services")
+                        setMenuOpen(false)
+                    }}><li className={active === "services" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Our Services</li></Link>
+                    <li className={active === "publication" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>
                         <div className='flex gap-2 items-center ' onClick={() => setdropdownOpen(!dropdownOpen)}>
                             Publication
                             <BsChevronCompactDown />
@@ -70,16 +87,32 @@ const Navbar = () => {
 
                         <div className={dropdownOpen ? 'flex flex-col gap-3 md:hidden text-[#263238] ml-6 mt-2  origin-top transition-all duration-100' :
                             'hidden flex-col gap-3 md:hidden text-[#263238] transition-all duration-100'}>
-                            <Link to={"/blogs"}>
-                                <div className='hover:text-navitem transition-all duration-100 cursor-pointer'>Blogs</div>
+                            <Link to={"/blogs"} onClick={() => {
+                                setActive("publication")
+                                setdropdownOpen(false)
+                                setMenuOpen(false)
+                            }}>
+                                <div className={active === "publication" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Blogs</div>
                             </Link>
-                            <Link to={"/books"}>
-                                <div className='hover:text-navitem transition-all duration-100 cursor-pointer'>Books</div>
+                            <Link to={"/books"} onClick={() => {
+                                setActive("publication")
+                                setdropdownOpen(false)
+                                setMenuOpen(false)
+                            }}>
+                                <div className={active === "publication" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Books</div>
                             </Link>
                         </div>
                     </li>
-                    <Link to={"/gallery"}><li className='hover:text-navitem transition-all duration-100 cursor-pointer'>Gallery</li></Link>
-                    <Link to={"/contactus"}><li className='hover:text-navitem transition-all duration-100 cursor-pointer'>Contact us</li></Link>
+                    <Link to={"/gallery"} onClick={() => {
+                        setActive("gallery")
+                        setMenuOpen(false)
+                    }}><li className={active === "gallery" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Gallery</li></Link>
+                    <Link to={"/contactus"} onClick={() => {
+                        setActive("contactus")
+                        setMenuOpen(false)
+                    }}><li className={active === "contactus" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Contact us</li></Link>
+
+
                 </ul>
             </div>
         </nav>

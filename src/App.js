@@ -6,7 +6,10 @@ import { Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Blogs from "./pages/Blogs";
 import Service from "./pages/Service";
-
+import Numerology from "./components/Numerology/Numerology";
+import RaikiHeal from "./components/Numerology/RaikiHeal";
+import Publication from "./components/Publication/Publication";
+import TarrotCard from "./components/Numerology/TarrotCard";
 function App() {
   return (
     <>
@@ -20,6 +23,16 @@ function App() {
         <Route path="/blogs" element={<Blogs></Blogs>}>
         </Route>
         <Route path="/services" element={<Service></Service>}>
+        </Route>
+        <Route path="/numerology" element={<Numerology></Numerology>}>
+        </Route>
+        <Route path="/raikiheal" element={<RaikiHeal></RaikiHeal>}>
+        </Route>
+        {/* <Route path="/footer" element={<Footer></Footer>}>
+        </Route> */}
+        <Route path="/tarrotcard" element={<TarrotCard></TarrotCard>}>
+        </Route>
+        <Route path="/publication" element={<Publication></Publication>}>
         </Route>
       </Routes>
       <Footer />

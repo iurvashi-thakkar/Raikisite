@@ -22,7 +22,7 @@ const Testimonial = () => {
     const nextRef = useRef(null);
 
     return (
-        <div className='px-5'>
+        <div className='px-5' id="client">
 
             <h1 className='text-center font-[600px] text-2xl  mt-5 md:hidden px-[40px]'>what our client has to say</h1>
             <div className='w-full flex gap-10 md:px-[40px] px-[22px] mt-[70px] justify-between '>

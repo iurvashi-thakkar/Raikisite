@@ -6,14 +6,17 @@ import Service from '../components/Home/Service';
 import About from '../components/Home/About';
 import Testimonial from '../components/Home/Testimonial';
 import Publication from '../components/Home/Publication';
-import MyCarousel from '../components/Home/Carousel/MyCarousel';
+// import MyCarousel1 from '../components/Home/MyCarousel1';
+import { MyCarousel } from '../components/Home/Carousel/MyCarousel';
+import OldCara from '../components/Home/Carousel/OldCara';
 
 
 const Home = () => {
     return (
         <>
             <Hero />
-            <MyCarousel />
+            {/* <MyCarousel /> */}
+            <OldCara />
             <Cards />
             <Service />
             <About />

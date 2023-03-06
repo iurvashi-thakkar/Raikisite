@@ -27,7 +27,7 @@ const Card = () => {
                 <p className='mt-[16px] text-[#6C757D] text-sm h-[97px] md:block hidden'>
                     Aenean eleifend ante maecenas pulvinar montes lorem et pede dis dolor pretium donec dictum. Vici consequat justo enim. Venenatis eget adipiscing luctus lorem.
                 </p>
-                <a href="#" className='md:mt-[10px] mt-auto font-bold text-[#8777D7] border-b-2 border-[#8777D7] w-max '>Read More</a>
+                <a href="/publication" className='md:mt-[10px] mt-auto font-bold text-[#8777D7] border-b-2 border-[#8777D7] w-max '>Read More</a>
             </div>
         </div>
     )

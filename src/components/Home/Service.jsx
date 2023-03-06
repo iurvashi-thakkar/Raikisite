@@ -11,7 +11,7 @@ const Service = () => {
             <h1 className='text-center md:text-4xl font-[600px] text-2xl md:font-normal md:hidden'>Our Services</h1>
             <div className='md:flex flex-col hidden'>
                 <h2 className='text-[#282828] text-4xl'>Our Services</h2>
-                <p className='w-[546px] text-[#565A5C] my-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum augue sed tempor facilisis</p>
+                <p className='w-[546px] text-[#565A5C] my-2 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum augue sed tempor facilisis</p>
                 <button className='mt-[31px] cursor-pointer bg-[#282828] w-[191px] h-[50px] text-white font-bold px-[42px]py-[13px] rounded-lg'>Explore More</button>
                 <img src={s1c4} alt="yoga" className='w-[590px] h-[314px] mt-[40px] rounded-md' />
             </div>
