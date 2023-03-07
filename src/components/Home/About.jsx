@@ -54,6 +54,9 @@ const About = () => {
                     <a className="md:block hidden"><button className='rounded-lg text-[#6F9FC2] bg-white  border-2 px-[20px] py-[9px] border-[#6F9FC2]'>Know more</button></a>
                 </div>
 
+                <a className="md:hidden block"><button className='rounded-md text-white bg-[#6F9FC2]  border-2  py-[9px] border-[#6F9FC2] w-[100%]'>Know more</button></a>
+
+
 
             </div>
 

@@ -20,20 +20,20 @@ const Cards = () => {
                 </div>
             </div>
 
-            <div className='flex mt-20 md:px-[40px] md:gap-12 sm:gap-3 gap-y-10 justify-center flex-wrap '>
+            <div className='flex mt-20 md:px-[40px] md:gap-12 sm:gap-3 gap-y-10 justify-center flex-wrap'>
                 <div className='flex flex-col gap-3 md:w-[200px] w-[115px] items-center px-2'>
                     <img src={health} alt="health" className='md:w-[82px] md:h-[82px] w-[52px] h-[52px] ' />
                     <h3 className='font-bold'>Health</h3>
                     <p className='md:text-sm text-xs text-center'>Achieve physical, mental, emotional, and spiritual well-being</p>
                 </div>
-                <div className='md:w-[2px] w-[2px] md:h-[200px] h-[180px]  bg-[#ABB8C3] '>
+                <div className='md:w-[2px] w-[2px] md:h-[200px] h-[180px]  bg-[#E9E9E9] '>
                 </div>
                 <div className='flex flex-col gap-3 md:w-[200px] w-[115px] items-center  px-2'>
                     <img src={abundance} alt="health" className='md:w-[82px] md:h-[82px] w-[52px] h-[52px]' />
                     <h3 className='font-bold'>Abundance</h3>
                     <p className='md:text-sm text-xs text-center'>Achieve physical, mental, emotional, and spiritual well-being</p>
                 </div>
-                <div className='md:w-[2px] w-[2px] md:h-[200px] h-[180px]  bg-[#ABB8C3] '>
+                <div className='md:w-[2px] w-[2px] md:h-[200px] h-[180px]  bg-[#E9E9E9] '>
 
                 </div>
                 <div className='flex flex-col gap-3 md:w-[200px] w-[115px] items-center  px-2'>
@@ -41,7 +41,7 @@ const Cards = () => {
                     <h3 className='font-bold'>Relationships</h3>
                     <p className='md:text-sm text-xs text-center'>Achieve physical, mental, emotional, and spiritual well-being</p>
                 </div>
-                <div className='md:w-[2px]  md:h-[200px] h-[180px] md:block hidden bg-[#ABB8C3] '>
+                <div className='md:w-[2px]  md:h-[200px] h-[180px] md:block hidden bg-[#E9E9E9] '>
 
                 </div>
                 <div className='flex flex-col gap-3 md:w-[200px] w-[115px] items-center  px-2'>
@@ -49,7 +49,7 @@ const Cards = () => {
                     <h3 className='font-bold'>Peace</h3>
                     <p className='md:text-sm text-xs text-center'>Achieve physical, mental, emotional, and spiritual well-being</p>
                 </div>
-                <div className='md:w-[2px] w-[2px] md:h-[200px] h-[180px]  bg-[#ABB8C3]  '>
+                <div className='md:w-[2px] w-[2px] md:h-[200px] h-[180px]  bg-[#E9E9E9]  '>
 
                 </div>
                 <div className='flex flex-col gap-3 md:w-[200px] w-[115px] items-center  px-2'>

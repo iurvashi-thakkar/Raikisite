@@ -32,28 +32,31 @@ const VerticalSlider = () => {
         },
     ];
     return (
-        <div className="flex md:hidden items-center gap-[15px] overflow-x-hidden">
-            <div className="left-nav">
-                {arr.map((i, index) => (
-                    <span
-                        key={index}
-                        className={current === i.index ? "circle active" : "circle"}
-                        onClick={() => setCurrent(i.index)}
-                    ></span>
-                ))}
+        <>
+            <h2 className='text-center md:hidden block font-[600px] text-2xl mt-[40px] mb-[30px]'>Journey</h2>
+            <div className="flex md:hidden items-center gap-[15px] overflow-x-hidden">
+                <div className="left-nav">
+                    {arr.map((i, index) => (
+                        <span
+                            key={index}
+                            className={current === i.index ? "circle active" : "circle"}
+                            onClick={() => setCurrent(i.index)}
+                        ></span>
+                    ))}
+                </div>
+                <div className="right-part w-full">
+                    {arr.map((i) => (
+                        <div
+                            key={i.index}
+                            className={current === i.index ? "card active" : "card"}
+                        >
+                            <h6 className="title">{i.title}</h6>
+                            <p className="content">{i.content}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="right-part">
-                {arr.map((i) => (
-                    <div
-                        key={i.index}
-                        className={current === i.index ? "card active" : "card"}
-                    >
-                        <h6 className="title">{i.title}</h6>
-                        <p className="content">{i.content}</p>
-                    </div>
-                ))}
-            </div>
-        </div>
+        </>
     )
 }
 

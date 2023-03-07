@@ -4,8 +4,8 @@ import { RiDoubleQuotesL } from 'react-icons/ri'
 
 const TestimonialCard = () => {
     return (
-        <div className='flex flex-col md:w-[440px] gap-5 shadow-lg md:p-[25px] p-[20px] text-[#282828] w-[185px]'>
-            <RiDoubleQuotesL size={45} className='text-[#8777D7]' />
+        <div className='flex flex-col md:w-[440px] gap-5 shadow-md md:p-[25px] p-[20px] text-[#282828] w-[165px]'>
+            <RiDoubleQuotesL size={35} className='text-[#8777D7]' />
             <p className='text-base md:block hidden'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum augue sed tempor facilisisLorem ipsum dolor sit amet, ectetur adipiscing elit. Curabitur condimentum augue sed tempor facilisisLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p className='text-sm  md:hidden'>I love creating new think every single days so let’s do it together it was wonderful to work with you.</p>
             <div className='flex gap-3 items-center'>

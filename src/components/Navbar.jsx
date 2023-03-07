@@ -16,16 +16,16 @@ const Navbar = () => {
                 <img src={logo} alt="logo" />
                 <ul className='flex items-center gap-4 text-sm'>
                     <Link to={"/"} onClick={() => setActive("home")}>
-                        <li className={active === "home" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Home</li>
+                        <li className={active === "home" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem border-b-4 border-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer border-b-8-navitem'}>Home</li>
                     </Link>
                     <Link to={"/about"} onClick={() => setActive("about")}>
-                        <li className={active === "about" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>About</li>
+                        <li className={active === "about" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem border-b-4 border-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>About</li>
 
                     </Link>
                     <Link to={"/services"} onClick={() => setActive("services")}>
-                        <li className={active === "services" ? ' transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Our Services</li>
+                        <li className={active === "services" ? ' transition-all duration-100 cursor-pointer text-navitem border-b-4 border-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Our Services</li>
                     </Link>
-                    <li className={active === "publication" ? 'transition-all duration-100 cursor-pointer relative text-navitem' : 'hover:text-navitem  transition-all duration-100 cursor-pointer relative'}>
+                    <li className={active === "publication" ? 'transition-all duration-100 cursor-pointer relative text-navitem border-b-4 border-navitem font-bold' : 'hover:text-navitem  transition-all duration-100 cursor-pointer relative'}>
                         <div className='flex gap-2 items-center' onClick={() => setdropdownOpen(!dropdownOpen)}>
                             Publication
                             <BsChevronCompactDown />
@@ -43,15 +43,15 @@ const Navbar = () => {
                                 setActive("publication")
                                 setdropdownOpen(false)
                             }}>
-                                <div className='hover:text-navitem transition-all duration-100 cursor-pointer '>Books</div>
+                                <div className='hover:text-navitem transition-all duration-100 cursor-pointer'>Books</div>
                             </Link>
                         </div>
                     </li>
                     <Link to={"/gallery"} onClick={() => setActive("gallery")}>
-                        <li className={active === "gallery" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem  transition-all duration-100 cursor-pointer'}>Gallery</li>
+                        <li className={active === "gallery" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem border-b-4 border-navitem font-bold' : 'hover:text-navitem  transition-all duration-100 cursor-pointer'}>Gallery</li>
                     </Link>
                     <Link to={"/contactus"} onClick={() => setActive("contactus")}>
-                        <li className={active === "contactus" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem  transition-all duration-100 cursor-pointer'}>Contact us</li>
+                        <li className={active === "contactus" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem border-b-4 border-navitem font-bold' : 'hover:text-navitem  transition-all duration-100 cursor-pointer'}>Contact us</li>
                     </Link>
 
                 </ul>
@@ -69,48 +69,48 @@ const Navbar = () => {
                     <Link to={"/"} onClick={() => {
                         setActive("home")
                         setMenuOpen(false)
-                    }}><li className={active === "home" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Home</li></Link>
+                    }}><li className={active === "home" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Home</li></Link>
                     <Link to={"/about"} onClick={() => {
                         setActive("about")
                         setMenuOpen(false)
-                    }}><li className={active === "about" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>About</li></Link>
+                    }}><li className={active === "about" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>About</li></Link>
                     <Link to={"/services"} onClick={() => {
                         setActive("services")
                         setMenuOpen(false)
-                    }}><li className={active === "services" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Our Services</li></Link>
-                    <li className={active === "publication" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>
+                    }}><li className={active === "services" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Our Services</li></Link>
+                    <li className={active === "publication" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>
                         <div className='flex gap-2 items-center ' onClick={() => setdropdownOpen(!dropdownOpen)}>
                             Publication
                             <BsChevronCompactDown />
                         </div>
 
 
-                        <div className={dropdownOpen ? 'flex flex-col gap-3 md:hidden text-[#263238] ml-6 mt-2  origin-top transition-all duration-100' :
+                        <div className={dropdownOpen ? 'flex flex-col gap-3 md:hidden text-[#263238] ml-6 mt-2  origin-top transition-all duration-100 ' :
                             'hidden flex-col gap-3 md:hidden text-[#263238] transition-all duration-100'}>
                             <Link to={"/blogs"} onClick={() => {
                                 setActive("publication")
                                 setdropdownOpen(false)
                                 setMenuOpen(false)
                             }}>
-                                <div className={active === "publication" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Blogs</div>
+                                <div className={active === "publication" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Blogs</div>
                             </Link>
                             <Link to={"/books"} onClick={() => {
                                 setActive("publication")
                                 setdropdownOpen(false)
                                 setMenuOpen(false)
                             }}>
-                                <div className={active === "publication" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Books</div>
+                                <div className={active === "publication" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Books</div>
                             </Link>
                         </div>
                     </li>
                     <Link to={"/gallery"} onClick={() => {
                         setActive("gallery")
                         setMenuOpen(false)
-                    }}><li className={active === "gallery" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Gallery</li></Link>
+                    }}><li className={active === "gallery" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Gallery</li></Link>
                     <Link to={"/contactus"} onClick={() => {
                         setActive("contactus")
                         setMenuOpen(false)
-                    }}><li className={active === "contactus" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Contact us</li></Link>
+                    }}><li className={active === "contactus" ? 'hover:text-navitem transition-all duration-100 cursor-pointer text-navitem font-bold' : 'hover:text-navitem transition-all duration-100 cursor-pointer'}>Contact us</li></Link>
 
 
                 </ul>
